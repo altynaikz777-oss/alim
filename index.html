@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .icons {
+        display: flex;
+        flex-direction: column;
+      }
+      .icons img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+      .settings {
+        width: 50px;
+        height: 40px;
+        margin-left: -5px;
+      }
+      .all {
+        color: rgb(27, 27, 237, 0.5);
+        border-bottom: 10px;
+        border-width: 5px;
+        border-color: rgb(27, 27, 237, 0.5);
+        margin-left: -40px;
+        margin-top: 40px;
+position: absolute;
+top:0;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+      }
+      .top img {
+        width: 40px;
+        height: 40px;
+      }
+      .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .general {
+        background-color: cornflowerblue;
+        padding: 10px;
+        border-radius: 10px;
+        width: 200px;
+        height: 30px;
+        position: relative;
+      }
+      .general p {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        position: absolute;
+        top: 10px;
+        font-size: 15px;
+      }
+      .time {
+        color: white;
+        position: absolute;
+        top: 5px;
+        right: 2px;
+        font-size: 15px;
+      }
+      .general span {
+        color: white;
+        position: absolute;
+        top: 5px;
+      }
+      .hw {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        width: 200px;
+        height: 30px;
+        position: relative;
+      }
+      .hw p {
+        display: flex;
+        flex-direction: column;
+        color: black;
+        position: absolute;
+        top: 10px;
+        font-size: 15px;
+      }
+      .hw span {
+        color: black;
+        position: absolute;
+        top: 5px;
+        left: 40px;
+      }
+      .time2 {
+        color: black;
+        position: absolute;
+        top: 5px;
+        right: 2px;
+        font-size: 15px;
+      }
+      .hw img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0px;
+      }
+      .top1 {
+        width: 1000px;
+        height: 60px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        z-index: 22;
+      }
+      .top1 img {
+        width: 60px;
+        height: 50px;
+      }
+      .text p {
+        position: absolute;
+        top: 10px;
+      }
+      .bottom img {
+        width: 1000px;
+        height: 900px;
+        z-index: 0;
+        position: relative;
+      }
+      .maga {
+        background-color: white;
+        z-index: 10;
+        width: 180px;
+        height: 40px;
+        position: relative;
+        margin-top: -900px;
+        margin-left: 300px;
+        border-radius: 10px;
+      }
+      .maga strong {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        color: blueviolet;
+      }
+      .time3 {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        font-size: 10px;
+      }
+      .maga span {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: grey;
+      }
+      .maga p {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        top: 5px;
+      }
+      .maga1 {
+        background-color: white;
+        z-index: 10;
+        width: 190px;
+        height: 35px;
+        position: relative;
+        margin-top: 5px;
+        margin-left: 300px;
+        border-radius: 10px;
+      }
+      .maga1 p {
+        position: absolute;
+        left: 10px;
+        top: -10px;
+      }
+      .time4 {
+        font-size: 10px;
+        position: absolute;
+        right: 0px;
+        top: 20px;
+      }
+      .makosh img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top: 40px;
+        margin-left: 240px;
+      }
+      .teacher {
+        position: absolute;
+        top: 100px;
+        left: 300px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        z-index: 50;
+        width: 220px;
+        height: 30px;
+      }
+      .teacher p {
+        font-size: 15px;
+        position: absolute;
+        top: 6px;
+      }
+      .teacher strong {
+        font-size: 15px;
+        position: absolute;
+        top: 2px;
+        color: crimson;
+      }
+      .time5 {
+        position: absolute;
+        bottom: 0;
+        right: 3px;
+        font-size: 10px;
+      }
+      .teacher2 img {
+        width: 200px;
+        height: 400px;
+        position: absolute;
+        top: 180px;
+        left: 300px;
+      }
+      .teacher3 img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        top: 550px;
+        left: 260px;
+      }
+      .teacherm {
+        position: absolute;
+        top: 600px;
+        left: 300px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        z-index: 50;
+        width: 330px;
+        height: 30px;
+      }
+      .teacherm strong {
+        font-size: 15px;
+        position: absolute;
+        top: 0;
+        color: crimson;
+      }
+      .teacherm p {
+        font-size: 15px;
+      }
+      .time6 {
+        font-size: 10px;
+        position: absolute;
+        left: 320px;
+        top: 33px;
+      }
+      .teacher6 img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        top: 620px;
+        left: 260px;
+      }
+      .input {
+        width: 400px;
+        height: 30px;
+        background-color: white;
+        z-index: 44;
+        position: absolute;
+        bottom: 180px;
+        left: 250px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border-radius: 10px;
+        
+      }
+      .input input{
+          border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+}
+      .bottom {
+        width: 1000px;
+        height: 900px;
+        z-index: 0;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <img src="image/settings.png" class="settings" />
+        <span class="all">All</span>
+        <div class="icons">
+          <img src="image/archive.PNG" />
+          <img src="image/1f1.monkeys.jpg" />
+          <img src="image/gaziz.eng.jpg" />
+          <img src="image/easy.english.jpg" />
+          <img src="image/IMG_7558.jpg" />
+          <img src="image/IMG_7559.jpg" />
+          <img src="image/IMG_7560.jpg" />
+          <img src="image/bot.jpg" />
+          <img src="image/IMG_7561.jpg" />
+        </div>
+      </div>
+      <div class="container2">
+        <div class="top">
+          <img src="image/x.png" />
+          <p>2F1 WEB 25/26<br />30 members,2 on...</p>
+          <img src="image/search.png" />
+          <img src="image/tochka.png" />
+        </div>
+        <div class="general">
+          <span># General</span>
+          <p>teacher:CSS otkennen kein...</p>
+          <time class="time">22:22</time>
+        </div>
+        <div class="hw">
+          <img src="image/green.png" />
+          <span>Home Works</span>
+          <p>teacher:full creativity kossand...</p>
+          <time class="time2">21:11</time>
+        </div>
+      </div>
+      <div class="main">
+        <div class="top1">
+          <div><img src="image/reshetka.png" /></div>
+          <div class="text">
+            <strong>General</strong>
+            <p>363 messages</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <img src="image/fon.png" />
+          <div class="messages">
+            <div class="maga">
+              <strong>Magzhan</strong>
+              <time class="time3">22:01</time>
+              <span>owner</span>
+              <p>ok</p>
+            </div>
+            <div class="maga1">
+              <p>oni ar kim ozi istei ma?</p>
+              <time class="time4">22:01</time>
+            </div>
+            <div class="makosh">
+              <img src="image/maga.png" />
+            </div>
+            <div class="teacher">
+              <strong>Zhansaya Tazhibaeva</strong>
+              <p>ya arkim ozinin linkin ozi toltyradi</p>
+              <time class="time5">22:05</time>
+            </div>
+            <div class="teacher2">
+              <img src="image/Снимок экрана 2025-09-13 в 14.44.15.png" />
+            </div>
+            <div class="teacher3">
+              <img src="image/teacherr.png" />
+            </div>
+            <div class="teacherm">
+              <strong>Zhansaya Tazhibaeva</strong>
+              <p>css otkennen keingi barlik hw-tardi salip koindar</p>
+              <time class="time6">22:22</time>
+            </div>
+            <div class="teacher6">
+              <img src="image/teacherr.png" />
+            </div>
+          </div>
+          <div class="input">
+            <input type="text" name="input" placeholder="message" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
